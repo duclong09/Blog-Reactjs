@@ -1,0 +1,39 @@
+    /* about-me */
+    .bgImg {
+      background-image: url("/img/aboutme/banner.jpg");
+      background-repeat: no-repeat;
+      grid-column: 1 / span 2;
+      background-size: 100%;
+      height: 633px;
+      position: relative;
+      z-index: 1;
+    }
+    @media only screen and (max-width:601px){
+      .bgImg {max-height: 201px;}
+    }
+
+    .bgImg span{
+      position: absolute;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.7rem;
+      padding: 0.3rem;
+      font-style: italic;
+      max-width: 50%;
+      box-shadow: 0.3rem 0.3rem 0.3rem #003e51;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+    }
+    #map{
+      height: 300px;
+      grid-column: 1 / span 2;
+    }
+    .marker {
+      background-image: url("../img/pin.png");
+      background-size: cover;
+      width: 32px;
+      height: 40px;
+      cursor: pointer;
+    }

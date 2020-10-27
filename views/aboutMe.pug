@@ -1,0 +1,9 @@
+extends base
+block append head
+    link(rel='stylesheet' href='/css/aboutme.css')
+    script(src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js')
+    link(href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet')
+block content
+    .bgImg
+        span#introMe
+    div#map(data-locationvip=`${JSON.stringify(data)}`)

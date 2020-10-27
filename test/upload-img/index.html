@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img style="width: 300px;" id="img" src="./heart.png" alt="photo">
+    <input id="file" type="file">
+
+    <script>
+        file.addEventListener('change',e => {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                    var base64 = e.target.result;
+                    img.src = base64;
+            }
+            reader.readAsDataURL(e.target.files[0]);
+        });
+    </script>
+</body>
+</html>

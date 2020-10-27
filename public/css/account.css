@@ -1,0 +1,73 @@
+    /* account */
+    .box-account {
+     
+        display: flex;
+        grid-column: 1 / span2;
+        justify-content: space-between;
+        overflow: auto;
+      }
+  
+      .user-view__menu {
+        background-color: sandybrown;
+        width: 30%;
+      }
+  
+      ul.side-nav li {
+        padding: 3rem 1rem;
+        border-bottom: 1px solid black;
+        box-shadow: 0.3rem 0.3rem 0.5rem black;
+      }
+  
+      ul.side-nav li a {
+        color: white;
+        font-size: larger;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+  
+      }
+  
+      .box-account .user-view__content {
+        background-color: white;
+        width: 70%;
+        padding: 0 1rem;
+      }
+  
+      .box-account .user-view__content .user-view__form-container {}
+  
+      .box-account .user-view__content .user-view__form-container .heading-secondary {
+        color: rgb(227, 51, 209);
+        font-weight: bold;
+        font-style: italic;
+        box-shadow: 0.3rem 0.3rem 0.5rem rgb(49, 3, 45);
+      }
+  
+      .box-account .btn--green {
+        background-color: rgb(85, 197, 122);
+        border: none;
+        width: 50%;
+        padding: 0.5rem;
+  
+      }
+  
+      .box-account .user-view__content .form__input {
+        margin: 1rem 0;
+        padding: 1rem 0.5rem;
+        background-color: #f2f2f2;
+    
+      }
+      .box-account .user-view__content .form__label {
+        font-weight: bold;
+      }
+      .form__input:focus {
+        outline: none;
+        border-bottom: 3px solid #55c57a; 
+      }
+      .form__input:focus:invalid {
+        border-bottom: 3px solid #ff7730;
+      }
+      .form__user-photo {
+        height: 7.5rem;
+        width: 7.5rem;
+        border-radius: 50%;
+        margin-right: 2rem;
+      }

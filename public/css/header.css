@@ -1,0 +1,149 @@
+/* pagination */
+html,
+body {
+  width: 100%;
+  font-size: 16px;
+}
+
+/* HEADER */
+.header {
+  padding: 10px !important;
+  background-color: #f36e62;
+  height: 5rem;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.nav {
+  padding: 10px;
+}
+/* FLEX ITEM NAV HEADER */
+.nav.nav--tours {
+  float: left;
+  width: 33%;
+}
+.nav.nav--user {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  width: 33%;
+}
+.header__logo {
+  float: left;
+  width: 33%;
+  height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .header__logo {
+    width: 100px;
+  }
+}
+
+/* Tag a header */
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem !important;
+  text-align: center;
+}
+.nav a:hover {
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.header__logo img {
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .header__logo {
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    /* order: -1; */
+    /* margin-bottom: 1.5rem; */
+  }
+  .nav .nav--user {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.center {
+  margin: 10px 0;
+  text-align: center;
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  font-size: 22px;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+/* css page detail */
+.blogDetail {
+  width: 100%;
+}
+.blogDetail .title {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  color: #eb4d4b;
+  font-size: 3vh;
+}
+.blogDetail .wrap-img {
+  width: 100%;
+}
+.blogDetail .wrap-img img {
+  margin: 0 auto;
+  width: 100%;
+  height: 50vh;
+}
+.blogDetail .wrap-content1 {
+  padding: 20px 0;
+  width: 100%;
+}
+.imgTitle {
+  width: 100%;
+  height: 500px;
+}
+.imgTitle img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+}

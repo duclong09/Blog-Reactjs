@@ -1,0 +1,44 @@
+<div class="box-account">
+    <nav class="user-view__menu">
+        <ul class="side-nav">
+            <li class="side-nav--active"><a href="#">Settings</a></li>
+            <li><a href="/my-tours">My bookings</a></li>
+            <li><a href="#">My reviews</a></li>
+            <li><a href="#">Billing</a></li>
+        </ul>
+    </nav>
+    <div class="user-view__content">
+        <div class="user-view__form-container">
+            <h2 class="heading-secondary">Your account settings</h2>
+            <form class="form form-user-data">
+                <div class="form__group"><label class="form__label" for="name">Name</label><input class="form__input"
+                        id="name" type="text" value="hunghung" required="" name="name"></div>
+                <div class="form__group ma-bt-md"><label class="form__label" for="email">Email address</label><input
+                        class="form__input" id="email" type="email" value="tranhung@gmail.com" required="" name="email">
+                </div>
+                <div class="form__group form__photo-upload"><img class="form__user-photo" id="dataImg"
+                        src="https://res.cloudinary.com/tranconghoa/image/upload/v1603467537/user/default_lefmy2.jpg"
+                        alt="User photo"><input class="form__upload" type="file" accept="image/*" id="photo"
+                        name="photo"><label for="photo">Choose new photo</label></div>
+                <div class="form__group right"><button class="btn btn--small btn--green">Save settings</button></div>
+            </form>
+        </div>
+        <div class="line">&nbsp;</div>
+        <div class="user-view__form-container">
+            <h2 class="heading-secondary">Password change</h2>
+            <form class="form form-user-password">
+                <div class="form__group"><label class="form__label" for="password-current">Current
+                        password</label><input class="form__input" id="password-current" type="password"
+                        placeholder="••••••••" required="" minlength="8"></div>
+                <div class="form__group"><label class="form__label" for="password">New password</label><input
+                        class="form__input" id="password" type="password" placeholder="••••••••" required=""
+                        minlength="8"></div>
+                <div class="form__group ma-bt-lg"><label class="form__label" for="password-confirm">Confirm
+                        password</label><input class="form__input" id="password-confirm" type="password"
+                        placeholder="••••••••" required="" minlength="8"></div>
+                <div class="form__group right"><button class="btn btn--small btn--green btn--save-password">Save
+                        password</button></div>
+            </form>
+        </div>
+    </div>
+</div>

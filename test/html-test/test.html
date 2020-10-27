@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>CongHoaBlog |</title>
+  <style>
+    html {
+      font-size: 10px;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1140px;
+      background: rgb(243, 242, 242);
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    header {
+      height: 50px;
+      background-color: rgb(243, 120, 98);
+      padding: 10px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* nav */
+    .nav {
+      width: 40px;
+      height: 40px;
+    }
+
+    .menu-icon {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5px 5px;
+      box-sizing: border-box;
+      cursor: pointer;
+      border: 1px solid rgb(0, 62, 80);
+    }
+
+    /* nav */
+    .nav:hover {
+      box-shadow: 3px 3px 3px rgb(0, 62, 80);
+    }
+
+    /* show navbar */
+    .nav:hover ul {
+      display: block;
+    }
+
+    .menu-icon div {
+      width: 100%;
+      height: 3px;
+      background-color: rgb(0, 62, 80);
+      margin: 2px 0;
+    }
+
+    ul.menu {
+      background-color: greenyellow;
+      width: 150px;
+      border: 1px solid black;
+      list-style: none;
+      display: none;
+      position: relative;
+      z-index: 2;
+    }
+
+    ul.menu li {
+      padding: 10px;
+      border-bottom: 1px solid black;
+    }
+
+    ul.menu li:hover {
+      box-shadow: 3px 3px 3px rgb(0, 62, 80);
+    }
+
+    ul li:last-child {
+      border: none;
+    }
+
+    ul li a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    ul.login-sigup {
+      width: 100%;
+      max-width: 200px;
+      overflow: auto;
+    }
+
+    ul.login-sigup li {
+      float: right;
+      list-style: none;
+      padding: 10px;
+    }
+
+    ul.login-sigup li a {
+      color: white;
+      font-weight: bold;
+      display: grid;
+      grid-template-columns: auto;
+    }
+
+    main {
+      display: grid;
+      margin: 20px;
+      overflow: auto;
+    }
+
+    @media only screen and (min-width: 601px) {
+      main {
+        grid-template-columns: auto auto;
+      }
+    }
+
+    .box {
+      max-width: 300px;
+      overflow: auto;
+      background-color: white;
+      margin: 10px auto;
+      box-shadow: 2px 3px 3px rgb(0, 62, 80);
+    }
+
+    .box img {
+      display: block;
+      margin: 0 auto;
+      height: 150px;
+    }
+
+    .line-btn {
+      max-width: 100%;
+      overflow: auto;
+    }
+
+    .line-btn button {
+      max-width: 50%;
+    }
+
+    /* logo */
+    .icon-logo {
+      max-width: 50px;
+      width: 50px;
+      height: 100%;
+      background-image: url("./public/img/rose.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    span {
+      display: block;
+    }
+
+    .wrap-mw200 {
+      max-width: 200px;
+      width: 100%;
+    }
+
+    .box span {
+      padding: 10px 30px;
+    }
+
+    .box span.title {
+      font-weight: bold;
+      font-style: italic;
+      font-size: larger;
+    }
+
+    .box-line1 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .box-footer {
+      display: flex;
+      justify-content: space-around;
+      background-color: rgb(255, 255, 255);
+      border: 1px solid sandybrown;
+      padding: 10px;
+    }
+
+    .box-footer button {
+      padding: 10px;
+      border: none;
+      background-color: sandybrown;
+    }
+
+    footer {
+      height: 100px;
+      background-color: #003e51;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    footer .icon-logo2 {
+      max-width: 100%;
+    }
+
+    footer .link {
+      max-width: 100%;
+    }
+
+    footer .icon-logo2 img {
+      display: block;
+      max-height: 30px;
+    }
+
+    ul.link-footer {
+      display: flex;
+      justify-content: space-between;
+      max-width: 300px;
+    }
+
+    footer ul.link-footer a {
+      text-decoration: none;
+      color: white;
+    }
+
+    ul.link-footer li {
+      list-style: none;
+      padding-right: 10px;
+    }
+
+    footer .author {
+      color: white;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    ol,
+    ul {
+      margin-bottom: 0;
+    }
+
+    /* sigup login */
+    .sigup-form {
+      grid-column: 1 / span 2;
+      margin: 0 auto;
+    }
+
+    .sigup-form .heading {
+      color: rgb(234, 72, 70);
+      letter-spacing: 2px;
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+
+    .sigup-form .btn.btn--red {
+      background-color: rgb(190, 68, 57);
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .form__group {
+      display: flex;
+      flex-direction: column;
+      margin-top: 23px;
+    }
+
+    .sigup-form .form__label {
+      font-weight: bold;
+      font-style: italic;
+      letter-spacing: 2px;
+      font-size: 1.7rem;
+    }
+
+    .sigup-form .form__input {
+      background-color: white;
+      padding: 10px 15px;
+      border: none;
+    }
+
+    /* about-me */
+    .bgImg {
+      background-image: url("./public/img/aboutme/banner.jpg");
+      background-repeat: no-repeat;
+      grid-column: 1 / span 2;
+      background-size: 100%;
+      height: 633px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media only screen and (max-width:601px) {
+      .bgImg {
+        max-height: 201px;
+      }
+    }
+
+    .bgImg span {
+      position: absolute;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.7rem;
+      padding: 0.3rem;
+      font-style: italic;
+      max-width: 50%;
+      box-shadow: 0.3rem 0.3rem 0.3rem #003e51;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+    }
+
+    /* detail */
+    .blogDetail {
+      margin: 0 auto;
+    }
+
+    .blogDetail img {
+      width: 100%;
+    }
+
+    .blogDetail .title {
+      text-align: center;
+      padding: 2rem;
+      border: 1px solid sienna;
+      text-shadow: 0.5rem 0.5rem 1rem black;
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+      font-style: italic;
+    }
+
+    /* account */
+    .box-account {
+      background-color: violet;
+      display: flex;
+      grid-column: 1 / span2;
+      justify-content: space-between;
+      overflow: auto;
+    }
+
+    .user-view__menu {
+      background-color: rgb(241, 41, 108);
+      width: 30%;
+    }
+
+    ul.side-nav li {
+      padding: 3rem 1rem;
+      border-bottom: 1px solid black;
+      box-shadow: 0.3rem 0.3rem 0.5rem black;
+    }
+
+    ul.side-nav li a {
+      color: white;
+      font-size: larger;
+      font-weight: bold;
+      letter-spacing: 0.2rem;
+
+    }
+
+    .box-account .user-view__content {
+      background-color: white;
+      width: 70%;
+      padding: 0 1rem;
+    }
+
+    .box-account .user-view__content .user-view__form-container {}
+
+    .box-account .user-view__content .user-view__form-container .heading-secondary {
+      color: rgb(227, 51, 209);
+      font-weight: bold;
+      font-style: italic;
+      box-shadow: 0.3rem 0.3rem 0.5rem rgb(49, 3, 45);
+    }
+
+    .box-account .btn--green {
+      background-color: rgb(85, 197, 122);
+      border: none;
+      width: 50%;
+      padding: 0.5rem;
+
+    }
+
+    .box-account .user-view__content .form__input {
+      margin: 1rem 0;
+      padding: 1rem 0.5rem;
+      background-color: #f2f2f2;
+      border: none;
+    }
+
+    .box-account .user-view__content .form__label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="wrap-mw200">
+        <div class="nav">
+          <div class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About me</a></li>
+            <li><a href="/">My project</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="icon-logo"></div>
+      <ul class="login-sigup">
+        <li><a href="/">Login</a></li>
+        <li><a href="/">Sign up</a></li>
+      </ul>
+    </header>
+    <main>
+      <div class="bgImg">
+        <span id="introMe">
+
+        </span>
+      </div>
+    </main>
+    <footer>
+      <div class="icon-logo2">
+        <img src="./public/img/logo.png" alt="" />
+      </div>
+      <div class="link">
+        <ul class="link-footer">
+          <li><a href="">About me</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Link</a></li>
+          <li><a href="">Link</a></li>
+        </ul>
+        <span class="author">&copy; by TranHoa</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const arr = ['I AM A WEB DEVELOPER','WEB DESIGNER','IM READLY GOOD AT :', '1/ FRONT END DEVELOPER', '2/ BACK END DEVELOPER', 'MY TARGET: FULL STACK DEVELOPER'];
+   
+    let i = 0;
+    let elArray = 0;
+    let tam = true;
+
+
+    function a() {
+
+
+      var id = setInterval(() => {
+
+        if (i === arr[elArray].length) {
+          // LUOT VE
+          clearInterval(id);
+  
+          i = (arr[elArray].length - 1);
+          tam = false;
+          a();
+
+
+        } else {
+          // LUOT DI
+          if (tam) {
+            plus();
+          } else {
+            minus();
+          }
+
+        }
+
+      }, 100);
+
+    }
+
+    a();
+
+
+    function plus() {
+      introMe.innerHTML += arr[elArray].charAt(i++);
+    }
+    function minus() {
+      if(i < 0){
+        i = 0;
+        tam = true;
+        introMe.innerHTML = "";
+        // chuyen el array
+        elArray++;
+        if(elArray >= arr.length){
+          elArray = 0;
+        }
+      }else{
+        introMe.innerHTML = arr[elArray].slice(0, i--);
+      }
+    }
+
+  </script>
+</body>
+
+</html>

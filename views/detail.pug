@@ -1,0 +1,42 @@
+
+extends base
+block append head
+    link(rel='stylesheet' href='/css/bdetail.css')
+block content
+    .blogDetail
+        .title  #{title}
+        .imgTitle
+            img(src=`${post.photoCover}`, alt="photo")
+        //- - const contents = post.product_description.split("\\n");
+        .wrap-content1= post.product_description_1
+        - if(post.photoContent_1)
+            .wrap-img
+                img(src=`${post.photoContent_1}`, alt="photo1")
+        .wrap-content1= post.product_description_2
+        - if(post.photoContent_2)
+            .wrap-img
+                img(src=`${post.photoContent_2}`, alt="photo2")
+        .wrap-content1= post.product_description_3
+        - if(post.photoContent_3)
+            .wrap-img
+                img(src=`${post.photoContent_3}`, alt="photo3")
+        .wrap-content1= post.product_description_4
+        - if(post.photoContent_4)
+            .wrap-img
+                img(src=`${post.photoContent_4}`, alt="photo4")
+        .wrap-content1= post.product_description_5
+        - if(post.photoContent_5)
+            .wrap-img
+                img(src=`${post.photoContent_5}`, alt="photo5")
+        .wrap-content1= post.product_description_6
+        - if(post.photoContent_6)
+            .wrap-img
+                img(src=`${post.photoContent_6}`, alt="photo6")
+        .wrap-content1= post.product_description_7
+        - if(post.photoContent_7)
+            .wrap-img
+                img(src=`${post.photoContent_7}`, alt="photo7")
+
+
+        
+

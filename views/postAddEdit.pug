@@ -1,0 +1,119 @@
+extends base
+block content
+    .container
+        .row
+            .col-lg-6.col-md-offset-3
+                h1= title 
+                form.form-create-product(action="/add-update-product" method='post' enctype='multipart/form-data')
+                    .panel.panel-default
+                        .panel-body
+                            if(data)
+                                input(type='input' name="_id", value= data._id)
+                                .form-group
+                                    label(for='product_name') Product Title: 
+                                    input#product_name.form-control(type='text' name='product_name' value= data.product_name)
+                                .form-group
+                                    label(for='product_summary') Product Summary: 
+                                    input#product_summary.form-control(type='text' name='product_summary' value = data.product_summary)
+                                .form-group
+                                    label(for="photoCover") Choose one photoCover:
+                                    input#photoCover(type='file' accept='image/*' name='photoCover')
+
+
+                                .form-group
+                                    label(for='product_description_1') Product content 1: 
+                                    textarea.product_description#product_description_1.form-control(name="product_description_1" cols="100" rows="5")= data.product_description_1
+                                .form-group
+                                    label(for="photoContent_1") Choose one photo for content 1:
+                                    input#photoContent_1(type='file' accept='image/*' name='photoContent_1')
+
+                                if(data.product_description_2)
+                                    .form-group
+                                        label(for='product_description_2') Product content 2: 
+                                        textarea.product_description#product_description_2.form-control(name="product_description_2" cols="100" rows="5")= data.product_description_2
+                                    .form-group
+                                        label(for="photoContent_2") Choose one photo for content 2:
+                                        input#photoContent_2(type='file' accept='image/*' name='photoContent_2')                                   
+
+                                if(data.product_description_3)
+                                    .form-group
+                                        label(for='product_description_3') Product content 3: 
+                                        textarea.product_description#product_description_3.form-control(name="product_description_3" cols="100" rows="5")= data.product_description_3
+                                    .form-group
+                                        label(for="photoContent_3") Choose one photo for content 3:
+                                        input#photoContent_3(type='file' accept='image/*' name='photoContent_3')
+
+                                if(data.product_description_4)
+                                    .form-group
+                                        label(for='product_description_4') Product content 4: 
+                                        textarea.product_description#product_description_4.form-control(name="product_description_4" cols="100" rows="5")= data.product_description_4
+                                    .form-group
+                                        label(for="photoContent_4") Choose one photo for content 4:
+                                        input#photoContent_4(type='file' accept='image/*' name='photoContent_4')
+
+                                if(data.product_description_5)
+                                    .form-group
+                                        label(for='product_description_5') Product content 5: 
+                                        textarea.product_description#product_description_5.form-control(name="product_description_5" cols="100" rows="5")= data.product_description_5
+                                    .form-group
+                                        label(for="photoContent_5") Choose one photo for content 5:
+                                        input#photoContent_1(type='file' accept='image/*' name='photoContent_5')
+
+                                if(data.product_description_6)
+                                    .form-group
+                                        label(for='product_description_6') Product content 6: 
+                                        textarea.product_description#product_description_6.form-control(name="product_description_6" cols="100" rows="5")= data.product_description_6
+                                    .form-group
+                                        label(for="photoContent_6") Choose one photo for content 6:
+                                        input#photoContent_6(type='file' accept='image/*' name='photoContent_6')
+
+                                if(data.product_description_7)
+                                    .form-group
+                                        label(for='product_description_7') Product content 7: 
+                                        textarea.product_description#product_description_7.form-control(name="product_description_7" cols="100" rows="5")= data.product_description_7
+                                    .form-group
+                                        label(for="photoContent_7") Choose one photo for content 7:
+                                        input#photoContent_7(type='file' accept='image/*' name='photoContent_7')
+
+                                .btn.btn-success.btnPlus Plus 1 Content
+
+
+                                .form-group
+                                    label#idSeeImg(for="xao") Choose many photos:
+                                    input#photos(type='file' name='images' multiple)
+                                .form-group
+                                    label(for='product_price') Product Price: 
+                                    input#product_price.form-control(type='text' name='product_price')
+
+                                    
+                            else
+                                .form-group
+                                    label(for='product_name') Product Title: 
+                                    input#product_name.form-control(type='text' name='product_name')
+                                .form-group
+                                    label(for='product_summary') Product Summary: 
+                                    input#product_summary.form-control(type='text' name='product_summary')
+                                .form-group
+                                    label(for="photoCover") Choose one photoCover:
+                                    input#photoCover(type='file' accept='image/*' name='photoCover')
+
+
+                                .form-group
+                                    label(for='product_description_1') Product content 1: 
+                                    textarea.product_description#product_description_1.form-control(name="product_description_1" cols="100" rows="5")
+                                .form-group
+                                    label(for="photoContent_1") Choose one photo for content 1:
+                                    input#photoContent_1(type='file' accept='image/*' name='photoContent_1')
+                                .btn.btn-success.btnPlus Plus 1 Content
+
+
+                                .form-group
+                                    label#idSeeImg(for="xao") Choose many photos:
+                                    input#photos(type='file' name='images' multiple)
+                                .form-group
+                                    label(for='product_price') Product Price: 
+                                    input#product_price.form-control(type='text' name='product_price')
+
+                            button.btn.btn-success.btn-hoa-wait(type='submit') Add
+
+

@@ -1,0 +1,32 @@
+<div className="container custom-container">
+    <div className="row">
+        <div className="box-create-post">
+            <h1>Create A Post</h1>
+            <form className="form-create-product" action="/add-update-product" method="post" enctype="multipart/form-data">
+                <div className="panel panel-default">
+                    <div className="panel-body">
+                        <div className="form-group"><label for="product_name">Product Title: </label>
+                            <input className="form-control" id="product_name" type="text" name="product_name" /></div>
+                        <div className="form-group"><label for="product_summary">Product Summary: </label>
+                            <input className="form-control" id="product_summary" type="text" name="product_summary" /></div>
+                        <div className="form-group"><label for="photoCover">Choose one photoCover:</label>
+                            <input id="photoCover" type="file" accept="image/*" name="photoCover" /></div>
+                        <div className="form-group"><label for="product_description_1">Product content 1: </label><textarea
+                            className="product_description form-control" id="product_description_1"
+                            name="product_description_1" cols="100" rows="5"></textarea></div>
+                        <div className="form-group"><label for="photoContent_1">Choose one photo for content
+                                    1:</label>
+                            <input id="photoContent_1" type="file" accept="image/*" name="photoContent_1" />
+                        </div>
+                        <div className="btn btn-success btnPlus">Plus 1 Content</div>
+                        <div className="form-group"><label id="idSeeImg" for="xao">Choose many photos:</label><input
+                            id="photos" type="file" name="images" multiple="" /></div>
+                        <div className="form-group"><label for="product_price">Product Price: </label><input
+                            className="form-control" id="product_price" type="text" name="product_price" /></div><button
+                                className="btn btn-success btn-hoa-wait" type="submit">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

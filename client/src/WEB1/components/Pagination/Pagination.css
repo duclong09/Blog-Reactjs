@@ -1,0 +1,32 @@
+.pagination{
+    margin:  0 auto;
+    overflow: auto;
+}
+.page-item  {
+
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    border-color: sandybrown;
+    background-color: sandybrown;
+}
+.page-link{
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: .5rem .5rem;
+}
+/* may tinh */
+@media only screen and (min-width: 601px){
+    .pagination{
+        grid-column: 1 / span 2;
+    }
+    .page-link{
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        padding: 0 !important;
+    }
+}

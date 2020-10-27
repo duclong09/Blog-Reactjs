@@ -1,0 +1,305 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        title TranHoa | #{title}  
+        style.
+            * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            }
+            .container {
+            max-width: 1140px;
+            background: rgb(243, 242, 242);
+            margin: 0 auto;
+            }
+            header {
+            height: 50px;
+            background-color: rgb(243, 120, 98);
+            padding: 10px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+            /* nav */
+            .nav {
+            width: 40px;
+            height: 40px;
+            }
+            .menu-icon {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px 5px;
+            box-sizing: border-box;
+            cursor: pointer;
+            border: 1px solid rgb(0, 62, 80);
+            }
+            /* nav */
+            .nav:hover {
+            box-shadow: 3px 3px 3px rgb(0, 62, 80);
+            }
+            /* show navbar */
+            .nav:hover ul {
+            display: block;
+            }
+            .menu-icon div {
+            width: 100%;
+            height: 3px;
+            background-color: rgb(0, 62, 80);
+            margin: 2px 0;
+            }
+            ul.menu {
+            background-color: greenyellow;
+            width: 150px;
+            border: 1px solid black;
+            list-style: none;
+            display: none;
+            }
+            ul.menu li {
+            padding: 10px;
+            border-bottom: 1px solid black;
+            }
+            ul.menu li:hover {
+            box-shadow: 3px 3px 3px rgb(0, 62, 80);
+            }
+            ul li:last-child {
+            border: none;
+            }
+            ul.menu li a {
+            text-decoration: none;
+            font-weight: bold;
+            color:black;
+            }
+            ul.login-sigup {
+            width: 100%;
+            max-width: 200px;
+            overflow: auto;
+            margin-bottom:0 !important;
+            }
+            ul.login-sigup li {
+            float: right;
+            list-style: none;
+            padding: 10px;
+            }
+            ul.login-sigup li a {
+            color: white;
+            font-weight: bold;
+            display: grid;
+            grid-template-columns: auto;
+            }
+            main {
+            display: grid;
+            margin: 20px;
+            overflow: auto;
+            }
+            @media only screen and (min-width: 601px) {
+            main {
+            grid-template-columns: auto auto;
+            }
+            }
+            .box {
+            max-width: 300px;
+            overflow: auto;
+            background-color: white;
+            margin: 10px auto;
+            box-shadow: 2px 3px 3px rgb(0, 62, 80);
+            }
+            .box img {
+            display: block;
+            margin: 0 auto;
+            height: 150px;
+            }
+            .line-btn {
+            max-width: 100%;
+            overflow: auto;
+            }
+            .line-btn button {
+            max-width: 50%;
+            }
+            /* logo */
+            .icon-logo {
+            max-width: 50px;
+            width: 50px;
+            height: 100%;
+            background-image: url("/img/rose.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+            span {
+            display: block;
+            }
+            .wrap-mw200 {
+            max-width: 200px;
+            width: 100%;
+            }
+            .box span {
+            padding: 10px 30px;
+            }
+            .box span.title {
+            font-weight: bold;
+            font-style: italic;
+            font-size: larger;
+            }
+            .box-line1 {
+            display: flex;
+            justify-content: space-between;
+            }
+            .box-footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid sandybrown;
+            padding: 10px;
+            }
+            .box-footer button {
+            padding: 10px;
+            border: none;
+            background-color: sandybrown;
+            }
+            .box-footer button a{
+                text-decoration: none;
+                color:black;
+            }
+            footer {
+            height: 100px;
+            background-color: #003e51;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            }
+            footer .icon-logo2 {
+            max-width: 100%;
+            }
+            footer .link {
+            max-width: 100%;
+            }
+            footer .icon-logo2 img {
+            display: block;
+            max-height: 30px;
+            }
+            ul.link-footer {
+            display: flex;
+            justify-content: space-between;
+            max-width: 300px;
+            }
+            footer ul.link-footer a {
+            text-decoration: none;
+            color: white;
+            }
+            ul.link-footer li {
+            list-style: none;
+            padding-right: 10px;
+            }
+            footer .author {
+            color: white;
+            font-weight: bold;
+            text-align: right;
+            }
+                .center{
+                    text-align:center;
+                }
+    body
+        .container
+            header
+                .wrap-mw200
+                    .nav
+                        .menu-icon
+                            div
+                            div
+                            div
+                            div
+                        ul.menu
+                            li
+                                a(href='/') Home
+                            li
+                                a(href='/about-me') About me
+                            li
+                                a(href='/my-project') My project
+                .icon-logo
+                ul.login-sigup
+                    li
+                        a(href='/login') Login
+                    li
+                        a(href='/sigup') Sign up
+            main
+                each product in products
+                    .box
+                        img(src=`/img/blog/${product.photoCover}` alt='photo')
+                        span.title= product.product_name
+                        span.summary= product.product_summary
+                        .box-line1
+                            span.rating Rating
+                            span.vies views
+                        .box-footer
+                            button
+                                a.btnDeleteProduct(data-product-id=`${product._id}`) Delete
+                            button Update
+                            button
+                                a(href=`/detail/${product.product_slug}`) Detail
+
+
+                    //- .box
+                    //-   img(src='./public/images/post1.PNG' alt='')
+                    //-   span.title afsdfdssfdasdf sdfasdfasdfasf dsfasdf dsa d sasdfsdf
+                    //-   span.summary sadfsdfasdf sdfasdfasdf adsfasdfasdfas dsfasfasdfsdfdas
+                    //-   .box-line1
+                    //-     span.rating Rating
+                    //-     span.vies views
+                    //-   .box-footer
+                    //-     button Delete
+                    //-     button Update
+                    //-     button Detail
+            .center
+                if (pages > 0)
+                    ul.pagination.text-center
+                        if(current == 1)
+                            li.disabled
+                                a First
+                        else
+                            li
+                                a(href="/post/1") First
+                        - var i = Number(current) > 5 ? Number(current) - 4 : 1 
+                        if(i !== 1)
+                            li.disabled
+                                a ...
+                        while i <= (Number(current) + 4) && i <= pages
+                            if(i == current)
+                                li.active
+                                    a= i
+                            else
+                                li
+                                    a(href=`/post/${i}`)= `${i}`
+                            if(i === Number(current) + 4 && i < pages)
+                                li.disabled
+                                    a ...
+                            - i++
+                        if(current == pages)
+                            li.disabled
+                                a Last
+                        else
+                            li
+                                a(href=`/post/${pages}`) Last
+            footer  
+                .icon-logo2
+                    img(src='/img/logo.png' alt='logo-footer')
+                .link
+                    ul.link-footer
+                        li
+                        a(href='') About me
+                        li
+                        a(href='') Contact
+                        li
+                        a(href='') Link
+                        li
+                        a(href='') Link
+                    span.author © by TranHoa
+        script(src="/js/bundle.js")

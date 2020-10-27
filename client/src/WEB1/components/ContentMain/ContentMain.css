@@ -1,0 +1,31 @@
+.box span {
+    padding: 10px 30px;
+  }
+  .box span.title {
+    font-weight: bold;
+    font-style: italic;
+    font-size: larger;
+  }
+  .box-line1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .box-footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid sandybrown;
+    padding: 10px;
+  }
+  .box-footer button {
+    padding: 10px;
+    border: none;
+    background-color: sandybrown;
+  }
+  .box-footer button:hover {
+    box-shadow: 2px 2px 6px 1px black;
+  }
+  .box-footer button a {
+    text-decoration: none;
+    color: black;
+  }

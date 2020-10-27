@@ -1,0 +1,29 @@
+header
+  .wrap-mw200
+    .nav
+      .menu-icon
+        div
+        div
+        div
+        div
+      ul.menu
+        li
+          a(href='/') Home
+        li
+          a(href='/reactjs') Reactjs
+        li
+          a(href='/about-me') About me
+  .icon-logo
+  ul.login-sigup
+    if user
+      li.me
+        a.me(href='/me')
+          img.nav__user-img(src=`${user.photo}` alt=`Photo of ${user.name}`)
+          span= user.name.split(' ')[0] 
+      li
+        a.nav__el--logout Log out
+    else
+      li
+        a(href='/login') Login
+      li
+        a(href='/sigup') Sign up

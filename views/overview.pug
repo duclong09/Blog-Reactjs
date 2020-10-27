@@ -1,0 +1,59 @@
+extends base
+block content
+    main.main
+        .card-container
+            each product in products
+                
+                .card
+                    .card__header
+                        .card__picture
+                            .card__picture-overlay &nbsp;
+                            img.card__picture-img(src=`${product.photoCover[1]}`, alt=`photo`)
+                    .card__details
+                        h4.card__sub-heading= product.product_name
+                        p.card__text= product.product_summary
+                        .card__data
+                            svg.card__icon
+                                use(xlink:href='/img/icons.svg#icon-map-pin')
+                            span= "rating"
+                        .card__data
+                            svg.card__icon
+                                use(xlink:href='/img/icons.svg#icon-calendar')
+                            span= "views"
+                    .card__footer
+                        a.btn.btnDeleteProduct(data-product-id=`${product._id}`) Delete
+                        a.btn.btn--green.btn--small(href=`/detail/${product.product_slug}`) Details
+                        
+    .center
+        if (pages > 0)
+            ul.pagination.text-center
+                if(current == 1)
+                    li.disabled
+                        a First
+                else
+                    li
+                        a(href="/post/1") First
+                - var i = Number(current) > 5 ? Number(current) - 4 : 1 
+                if(i !== 1)
+                    li.disabled
+                        a ...
+                while i <= (Number(current) + 4) && i <= pages
+                    if(i == current)
+                        li.active
+                            a= i
+                    else
+                        li
+                            a(href=`/post/${i}`)= `${i}`
+                    if(i === Number(current) + 4 && i < pages)
+                        li.disabled
+                            a ...
+                    - i++
+                if(current == pages)
+                    li.disabled
+                        a Last
+                else
+                    li
+                        a(href=`/post/${pages}`) Last
+
+
+

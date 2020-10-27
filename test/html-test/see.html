@@ -1,0 +1,90 @@
+"
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CongHoaBlog | Update Page</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/mystyle.css">
+    <link rel="stylesheet" href="/css/sigup_login.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="wrap-mw200">
+                <div class="nav">
+                    <div class="menu-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about-me">About me</a></li>
+                        <li><a href="/my-project">My project</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="icon-logo"></div>
+            <ul class="login-sigup">
+                <li class="me"><a class="me" href="/me"><img class="nav__user-img"
+                            src="/img/users/imageCover-1601791637175.png" alt="Photo of hoa"><span>hoa</span></a></li>
+                <li><a class="nav__el--logout">Log out</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-offset-3">
+                        <h1>Add a New Product </h1>
+                        <form class="form-create-product" method="post" enctype="multipart/form-data">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="form-group"><label for="product_name">Product Title: </label><input
+                                            class="form-control" id="product_name" type="text" name="product_name">
+                                    </div>
+                                    <div class="form-group"><label for="product_summary">Product Summary: </label><input
+                                            class="form-control" id="product_summary" type="text"
+                                            name="product_summary"></div>
+                                    <div class="form-group"><label for="photoCover">Choose one photoCover:</label><input
+                                            id="photoCover" type="file" accept="image/*" name="photoCover"></div>
+                                    <div class="form-group"><label for="product_description_1">Product content 1:
+                                        </label><textarea class="product_description form-control"
+                                            id="product_description_1" name="product_description_1" cols="100"
+                                            rows="5"></textarea></div>
+                                    <div class="form-group"><label for="photoContent_1">Choose one photo for content
+                                            1:</label><input id="photoContent_1" type="file" accept="image/*"
+                                            name="photoContent_1"></div>
+                                    <div class="btn btn-success btnPlus">Plus 1 Content</div>
+                                    <div class="form-group"><label id="idSeeImg" for="xao">Choose many
+                                            photos:</label><input id="photos" type="file" name="images" multiple></div>
+                                    <div class="form-group"><label for="product_price">Product Price: </label><input
+                                            class="form-control" id="product_price" type="text" name="product_price">
+                                    </div><button class="btn btn-success btn-hoa-wait" type="submit">Add</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="icon-logo2"><img src="/img/logo.png" alt="logo-footer"></div>
+            <div class="link">
+                <ul class="link-footer">
+                    <li><a href="/about-me">About me</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                </ul><span class="author">© by TranCongHoa</span>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/bundle.js"></script>
+</body>
+
+</html>"

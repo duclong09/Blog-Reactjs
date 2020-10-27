@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-offset-3">
+            <h1>Create A Post</h1>
+            <form class="form-create-product" action="/add-update-product" method="post" enctype="multipart/form-data">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="form-group"><label for="product_name">Product Title: </label><input
+                                class="form-control" id="product_name" type="text" name="product_name"></div>
+                        <div class="form-group"><label for="product_summary">Product Summary: </label><input
+                                class="form-control" id="product_summary" type="text" name="product_summary"></div>
+                        <div class="form-group"><label for="photoCover">Choose one photoCover:</label><input
+                                id="photoCover" type="file" accept="image/*" name="photoCover"></div>
+                        <div class="form-group"><label for="product_description_1">Product content 1: </label><textarea
+                                class="product_description form-control" id="product_description_1"
+                                name="product_description_1" cols="100" rows="5"></textarea></div>
+                        <div class="form-group"><label for="photoContent_1">Choose one photo for content
+                                1:</label><input id="photoContent_1" type="file" accept="image/*" name="photoContent_1">
+                        </div>
+                        <div class="btn btn-success btnPlus">Plus 1 Content</div>
+                        <div class="form-group"><label id="idSeeImg" for="xao">Choose many photos:</label><input
+                                id="photos" type="file" name="images" multiple=""></div>
+                        <div class="form-group"><label for="product_price">Product Price: </label><input
+                                class="form-control" id="product_price" type="text" name="product_price"></div><button
+                            class="btn btn-success btn-hoa-wait" type="submit">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

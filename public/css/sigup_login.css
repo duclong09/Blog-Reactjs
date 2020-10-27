@@ -1,0 +1,50 @@
+ /* sigup login */
+ .sigup-form {
+    grid-column: 1 / span 2;
+    margin: 0 auto;
+  }
+
+   .heading {
+    color: rgb(234, 72, 70);
+    letter-spacing: 2px;
+    font-weight: bold;
+  font-size: 2.5rem;
+  }
+
+  .btn.btn--red {
+    background-color: rgb(190, 68, 57);
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .form__group{
+    display: flex;
+    flex-direction: column;
+    margin-top: 23px;
+  }
+  .form__label{
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-size: 1.7rem;
+  }
+ .form__input{
+    background-color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+
+  /* login */
+  .login-form {
+    grid-column: 1 / span 2;
+    margin: 0 auto;
+  }
+  .form__input:focus {
+    outline: none;
+    border-bottom: 3px solid #55c57a;
+  }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #ff7730;
+  }

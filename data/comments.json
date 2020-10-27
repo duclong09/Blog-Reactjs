@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "product_id": "1",
+    "comment_content": "Comment sp 1",
+    "comment_rate": "3"
+  },
+  {
+    "id": "2",
+    "product_id": "1",
+    "comment_content": "comment 2",
+    "comment_rate": "4"
+  },
+  {
+    "id": "3",
+    "product_id": "1",
+    "comment_content": "ttt",
+    "comment_rate": "5"
+  },
+  {
+    "id": "4",
+    "product_id": "1",
+    "comment_content": "hh",
+    "comment_rate": "5"
+  },
+  {
+    "id": "5",
+    "product_id": "2",
+    "comment_content": "gaaggag",
+    "comment_rate": "5"
+  },
+  {
+    "id": "6",
+    "product_id": "2",
+    "comment_content": "ádfasdf",
+    "comment_rate": "0"
+  },
+  {
+    "id": "7",
+    "product_id": "2",
+    "comment_content": "",
+    "comment_rate": "0"
+  },
+  {
+    "id": "8",
+    "product_id": "2",
+    "comment_content": "",
+    "comment_rate": "0"
+  },
+  {
+    "id": "9",
+    "product_id": "2",
+    "comment_content": "",
+    "comment_rate": "4"
+  }
+]

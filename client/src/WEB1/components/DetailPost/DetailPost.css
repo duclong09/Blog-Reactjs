@@ -1,0 +1,19 @@
+/* detail */
+.blogDetail {
+  margin: 0 auto;
+  grid-column: 1 / span 2;
+}
+
+.blogDetail img {
+  width: 100%;
+}
+.blogDetail .title {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid sienna;
+  text-shadow: 0.5rem 0.5rem 1rem black;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-style: italic;
+}

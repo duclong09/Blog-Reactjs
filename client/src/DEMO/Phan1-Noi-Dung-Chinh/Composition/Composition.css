@@ -1,0 +1,26 @@
+/* box demo compostion */
+.wrap-box{
+  text-align: center;
+ }
+.FancyBorder {
+    padding: 10px 10px;
+    border: 10px solid;
+    width: 500px;
+    margin: 20px auto;
+  }
+  
+  .FancyBorder-blue {
+    border-color: blue;
+  }
+  .FancyBorder-red {
+    border-color: red;
+  }
+  
+  .Dialog-title {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .Dialog-message {
+    font-size: larger;
+  }

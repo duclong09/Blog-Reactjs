@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        //- DINH NGHIA KHOI DE EXTEND (MO RONG CHO DE) NOI DUNG DUOC EXTEND SE BIEN MAT VE THEM NOI DUNG MOI VAO DUNG VI TRI 
+        //- NEU MUON NOI DUNG KHONG BIEN MAT TA EXTEND BANG block append head (NOI THEM VAO THOI)
+        block head
+            meta(charset='UTF-8')
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')
+            title CongHoaBlog | #{title}
+            link(rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+            link(rel='stylesheet' href='/css/mystyle.css')
+            link(rel='stylesheet' href='/css/sigup_login.css')
+    body
+        .container
+            //- HEADER
+            include _header
+            //- CONTENT
+            main
+                block content
+            //- FOOTER
+            include _footer
+        script(src="/js/bundle.js")
+

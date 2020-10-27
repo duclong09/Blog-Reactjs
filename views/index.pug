@@ -1,0 +1,50 @@
+extends base
+block content
+    each product in products
+        .box
+            img(src=`${product.photoCover}` alt='photo')
+            span.title= product.product_name
+            span.summary= product.product_summary
+            .box-line1
+                span.rating Rating
+                span.vies views
+            .box-footer
+                button
+                    a.btnDeleteProduct(data-product-id=`${product._id}`) Delete
+                button
+                    a.btnUpdateProduct(data-product-id=`${product._id}`) Update
+                button
+                    a(href=`/detail/${product.product_slug}`) Detail
+    .center
+        if (pages > 0)
+            ul.pagination.text-center
+                if(current == 1)
+                    li.disabled
+                        a First
+                else
+                    li
+                        a(href="/post/1") First
+
+                - var i = Number(current) > 5 ? Number(current) - 4 : 1 
+
+                if(i !== 1)
+                    li.disabled
+                        a ...
+                while i <= (Number(current) + 4) && i <= pages
+                    if(i == current)
+                        li.active
+                            a= i
+                    else
+                        li
+                            a(href=`/post/${i}`)= `${i}`
+                    if(i === Number(current) + 4 && i < pages)
+                        li.disabled
+                            a ...
+                    - i++
+                    
+                if(current == pages)
+                    li.disabled
+                        a Last
+                else
+                    li
+                        a(href=`/post/${pages}`) Last
